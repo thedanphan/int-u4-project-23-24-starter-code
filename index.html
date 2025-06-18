@@ -1,23 +1,86 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <title>INT: Unit 4 Quiz Project</title>
+        <title> Dan Phan: Unit 4 Project</title>
         <link href="https://fonts.googleapis.com/css2?family=Oswald&display=swap" rel="stylesheet">
         <link href="style.css" rel="stylesheet">
         <script defer src="script.js"></script>
     </head>
     <body>
         <div class="title">
-            <h1>Your Quiz Title Here!</h1>
+            <h1>Locked-In Vs. Cooked</h1>
+            <h2>Which one are you? Reload the page to play again.</h2>
         </div>
+
+
+        <div class="user-input">
+            <img id="title-image" src="https://i.imgflip.com/9t2b4u.jpg">
+            <h2>Enter your name:</h2>
+            <input type="text" id="name" placeholder="ex: Dan Phan">
+            <h2>Enter your age:</h2>
+            <input type="number" id="age" placeholder="ex: 17">
+            <br>
+            <button id="start-quiz">Start Quiz</button>
+        </div>
+
+
         <div class="questions">
-            <h4>User Question #1</h4>
-            <img src="https://img.buzzfeed.com/buzzfeed-static/static/2021-06/24/16/asset/815a5287257c/anigif_sub-buzz-4360-1624553394-78_preview.gif?output-quality=auto&output-format=auto&downsize=360:*">
-            <h4>User Question #2</h4>
-            <img src="https://img.buzzfeed.com/buzzfeed-static/static/2018-11/19/17/asset/buzzfeed-prod-web-05/anigif_sub-buzz-18467-1542667455-1.gif">
+            <div class="Q1">
+                <img src="https://media.licdn.com/dms/image/v2/D4D12AQE0GaPKScDeNQ/article-cover_image-shrink_600_2000/article-cover_image-shrink_600_2000/0/1662024773845?e=2147483647&v=beta&t=zVxNAAgrVxOmrAmXEJSHRLPCknR8UMXUO2COoeFShlQ">
+                <h4>Given a 1-Month Project: When do you start?</h4>
+                <button id="q11">Immediately.</button>
+                <button id="q12">The Day Before It's Due.</button>
+                <button id="q13">Maybe A Week In?</button>
+                <button id="q14">Maybe A Week Before It's Due</button>
+            </div>
+
+            <br>
+
+            <div class="Q2">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgzKJUCRiE6A9P335pTW0jxSDxoK71eDRpFg&s">
+                <h4>Question #2: What would your friends/family call you? </h4>
+                <button id="q21">Nonchalant, duh.</button>
+                <button id="q22">Unique!!</button>
+                <button id="q23">Unique...</button>
+                <button id="q24">A King/Queen! That's what they ALL call me.</button>
+            </div>
+            
+            <br>
+
+            <div class="Q3">
+                <img src="https://i.kym-cdn.com/photos/images/newsfeed/002/046/341/7ee.png">
+                <h4>Where do you see yourself in 20 years?</h4>
+                <button id="q31">Millionaire and Retired</button>
+                <button id="q32">Living steady and happy!</button>
+                <button id="q33">Couldn't tell you, I'm COOKED.</button>
+                <button id="q34">Honestly, wherever the wind takes me man...</button>
+            </div>
+
+            <br>
+
+            <div class="Q4">
+                <img src="https://i.kym-cdn.com/entries/icons/facebook/000/032/834/DtPiP_DWsAEPntc.jpg">
+                <h4>Given your favorite favorite activity that you love dearly. Hypothetically, in a competition involving your entire school with that activity, would you get atleast Top 10 out of the whole school?</h4>
+                <button id="q41">Yes.</button>
+                <button id="q42">No.</button>
+            </div>
         </div>
-        <div class="result">
-            This is where the user will see their quiz result.
+
+        <div class="results">
+            <div class="conclusion">
+                <img src="https://c8.alamy.com/comp/2KGE0KY/my-face-when-i-realize-i-forgot-our-anniversary-studio-portrait-of-a-handsome-young-man-biting-his-fingernails-in-anticipation-2KGE0KY.jpg">
+                <h2 id="allyou">hi</h2>
+                <button id = "results">See Results</button>
+            </div>
+            <div class="locked">
+                <img src="https://media.tenor.com/JbItZuzaRq8AAAAM/birthday-party.gif">
+                <h2>LOCKED IN CONGRATULATIONS!!!</h2>
+            </div>
+
+            <div class="cooked">
+                <img src="data:image/jpeg;base64,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">
+                <h2>Cooked.</h2>
+            </div>
         </div>
     </body>
 </html>
